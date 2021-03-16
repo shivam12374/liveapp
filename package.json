@@ -1,0 +1,61 @@
+{
+  "name": "liveapp",
+  "version": "0.1.0",
+  "main": "public/electron.js",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.1",
+    "electron-is-dev": "^2.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.0"
+  },
+  "scripts": {
+    "start-react": "react-scripts start",
+    "build-react": "react-scripts build",
+    "test-react": "react-scripts test --env=jsdom",
+    "eject-react": "react-scripts eject",
+    "build-electron": "electron-builder",
+    "build": "yarn build-react && yarn build-electron",
+    "start": "concurrently \"cross-env BROWSER=none yarn start-react\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "electron": "^12.0.1",
+    "electron-builder": "^22.10.5",
+    "wait-on": "^5.2.1"
+  },
+  "description": "This project was Create in electron desktop application using command as  1. mkdir plus91   2. cd plus91 3. npm init   (this will create package.json)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivam12374/liveapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivam12374/liveapp/issues"
+  },
+  "homepage": "https://github.com/shivam12374/liveapp#readme"
+}
